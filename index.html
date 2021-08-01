@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Website</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">  
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <ul class="nav navbar-nav " *ngIf="!collapsed">
+        <li><a href="/home" class="nav-link"><i class="fa fa-home"></i>&nbsp;Home
+        </a></li>                
+        <li><a href="/about" class="nav-link">About Me</a></li>
+        <li><a href="/nyc" class="nav-link">NYC</a></li>
+        <li><a href="/didi" class="nav-link">Didi</a></li>
+    
+    </ul>
+    <span class="navbar-brand ml-auto"><img src="assets/favicon.ico" height="30px"> :)</span>
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  
+
+
+    
+</div>
+<body>
+    <div class="home">
+        <!--Main layout-->
+            <div class="container">
+            
+                <!--Section: Our Mission-->
+                <section id="mission" class="text-center">
+    
+                    <!-- Heading -->
+                    <h2>hello !</h2>
+    
+    
+                    <br>
+    
+                    <!--Grid row-->
+                    <div class="row">
+                    
+                        
+                        <!--Grid column -->
+                        <div id="career" [style.opacity]="careerShow? 1:0" (click)="onClick('career')" style="cursor: pointer;" class="col-md-6 mb-1">
+                            <img src="assets/girl.png" height="20px">
+                            <img src="assets/laptop.png" height="30px">
+                            <h4 class="my-4">Career Interests</h4>
+                            <p class="grey-text">-?? </p>
+                        </div>
+    
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div id="education" [style.opacity]="educationShow? 1:0" (click)="onClick('education')" style="cursor: pointer;" class="col-md-6 mb-5">
+                            <img src="assets/clover.svg" height="20px"> 
+                            <img src="assets/cap.ico" height="30px">
+                            <h4 class="my-4">Education</h4>
+                            <p class="grey-text">-??</p>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <div class="row">
+                        <!--Grid column-->
+                        <div id="identity" [style.opacity]="identityShow? 1:0" (click)="onClick('identity')" style="cursor: pointer;" class="col-md-6 mb-5">
+                            <img src="assets/taiwan.png" height="20px"> 
+                            <img src="assets/woman.png" height="30px">
+                            <img src="assets/philippines.png" height="20px">
+                            <h4 class="my-4">Identity</h4>
+                            <p class="grey-text">-??</p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div id="activity" [style.opacity]="nycShow? 1:0" (click)="onClick('nyc')" style="cursor: pointer;" class="col-md-6 mb-5">
+                            <img src="assets/train.png" height="30px"/>
+    
+                            <h4 class="my-4">Activities</h4>
+                            <p class="grey-text"> ?? </p>
+                        </div>
+                        <!--Grid column-->
+    
+                        
+                        
+                    </div>
+    
+                </section>
+             
+    
+            </div>
+       <!--      <div>
+                <canvas class="myCanvas">
+                    <p>Add suitable fallback here.</p>
+                  </canvas>
+              
+                  <script>
+
+                    const canvas = document.querySelector('.myCanvas');
+                    const width = canvas.width = window.innerWidth;
+                    const height = canvas.height = window.innerHeight;
+                    const ctx = canvas.getContext('2d');
+              
+                    ctx.fillStyle = 'rgb(0,0,0)';
+                    ctx.fillRect(0,0,width,height);
+              
+                    ctx.translate(width/2, height/2);
+              
+                    function degToRad(degrees) {
+                      return degrees * Math.PI / 180;
+                    };
+              
+                    function rand(min, max) {
+                      return Math.floor(Math.random() * (max-min+1)) + (min);
+                    }
+              
+                    let length = 250;
+                    let moveOffset = 20;
+              
+                    for(var i = 0; i < length; i++) {
+                      ctx.fillStyle = 'rgba(' + (255-length) + ',0,' + (255-length) + ',0.9)';
+                      ctx.beginPath();
+                      ctx.moveTo(moveOffset,moveOffset);
+                      ctx.lineTo(moveOffset+length,moveOffset);
+                      let triHeight = length/2 * Math.tan(degToRad(60));
+                      ctx.lineTo(moveOffset+(length/2),moveOffset+triHeight);
+                      ctx.lineTo(moveOffset,moveOffset);
+                      ctx.fill();
+              
+                      length--;
+                      moveOffset+=0.7;
+                      ctx.rotate(degToRad(5));
+                    }
+              
+                  </script>
+            </div> -->
+
+            
+            <div class="canvas">
+                <canvas class="myCanvas">
+                    <p>Add suitable fallback here.</p>
+                  </canvas>
+              
+                  <script src="canvas.js"></script>
+            </div>
+    
+        <!--Main layout-->
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <div class="footer" >
+        <hr class="my-5">
+        <div class="content">
+            <p><i class="icon-star-empty fa"></i>&nbsp; m i a &nbsp; m a n a b a t &nbsp;<i class="icon-star-empty fa"></i></p>
+            <p><a href="mailto:miamanabat@gmail.com"><i class="icon-envelope-alt fa"></i></a>&nbsp;
+            <a href="https://www.linkedin.com/in/miamanabat" class="fa fa-linkedin "> </a>&nbsp;
+            <a href="https://github.com/miamanabat"><i class="icon-github fa"></i></a>&nbsp;  
+            <a href="https://www.facebook.com/mia.manabat.9/" class="fa fa-facebook "> </a>&nbsp;            
+            <a href="https://www.instagram.com/miamanabat/" class="fa fa-instagram "></a>&nbsp;
+        </p>
+        </div>
+    </div>
+</footer>
+</html>
