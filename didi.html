@@ -13,14 +13,13 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <ul class="nav navbar-nav " *ngIf="!collapsed">
-        <li><a href="/home" class="nav-link"><i class="fa fa-home"></i>&nbsp;Home
-        </a></li>                
-        <li><a href="/about" class="nav-link">About Me</a></li>
-        <li><a href="/nyc" class="nav-link">NYC</a></li>
-        <li><a href="/didi" class="nav-link">Didi</a></li>
-    
-    </ul>
+  <ul class="nav navbar-nav " *ngIf="!collapsed">
+    <li><a href="/" class="nav-link"><i class="fa fa-home"></i>&nbsp;Home
+    </a></li>                
+    <li><a href="/about" class="nav-link">About Me</a></li>
+    <li><a href="/" class="nav-link">Activities</a></li>
+
+</ul>
     <span class="navbar-brand ml-auto"><img src="assets/favicon.ico" height="30px"> :)</span>
     <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
       <span class="navbar-toggler-icon"></span>
