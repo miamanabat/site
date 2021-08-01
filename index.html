@@ -10,25 +10,52 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">  
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-    <ul class="nav navbar-nav " *ngIf="!collapsed">
-        <li><a href="/" class="nav-link"><i class="fa fa-home"></i>&nbsp;Home
-        </a></li>                
-        <li><a href="/about" class="nav-link">About Me</a></li>
-        <li><a href="/" class="nav-link">Activities</a></li>
-    
-    </ul>
-    <span class="navbar-brand ml-auto"><img src="assets/favicon.ico" height="30px"> :)</span>
-    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
+
 
     
+
+<body onload="myFunction()" style="margin:0;">
+<div id="loader-wrapper">
+    <div>
+        <p style="text-align:center; margin:100px;">loading...</p>
+    </div>
+    <div id="loader">
+        <img src="assets/favicon.ico" height="100%">
+    </div>
 </div>
-<body>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">    <span class="navbar-brand ml-auto"><img src="assets/favicon.ico" height="30px"> :)</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home"></i>&nbsp;Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Activities</a>
+          </li>
+        </ul>
+<!--         <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
+
     <div class="home">
         <!--Main layout-->
             <div class="container">
@@ -37,7 +64,7 @@
                 <section id="mission" class="text-center">
     
                     <!-- Heading -->
-                    <h2>hello !</h2>
+                    <h2>hello ! [ currently under construction :) ]</h2>
     
     
                     <br>
@@ -45,42 +72,47 @@
                     <!--Grid row-->
                     <div class="row">
                     
-                        
+                    
+            
                         <!--Grid column -->
-                        <div id="career" [style.opacity]="careerShow? 1:0" (click)="onClick('career')" style="cursor: pointer;" class="col-md-6 mb-1">
+                        <div id="career" class="col-md-6 mb-1" onClick="showSection('career')">
+                            <a href=""></a>
                             <img src="assets/girl.png" height="20px">
                             <img src="assets/laptop.png" height="30px">
                             <h4 class="my-4">Career Interests</h4>
-                            <p class="grey-text">-?? </p>
+                            <p class="grey-text"> </p>
                         </div>
     
                         <!--Grid column-->
     
                         <!--Grid column-->
-                        <div id="education" [style.opacity]="educationShow? 1:0" (click)="onClick('education')" style="cursor: pointer;" class="col-md-6 mb-5">
+                        <div id="education" class="col-md-6 mb-5" onClick="showSection('education')">
+                            <a href=""></a>
                             <img src="assets/clover.svg" height="20px"> 
                             <img src="assets/cap.ico" height="30px">
                             <h4 class="my-4">Education</h4>
-                            <p class="grey-text">-??</p>
+                            <p class="grey-text"></p>
                         </div>
                         <!--Grid column-->
                     </div>
                     <div class="row">
                         <!--Grid column-->
-                        <div id="identity" [style.opacity]="identityShow? 1:0" (click)="onClick('identity')" style="cursor: pointer;" class="col-md-6 mb-5">
+                        <div id="identity" class="col-md-6 mb-5" onClick="showSection('identity')">
+                            <a href=""></a>
                             <img src="assets/taiwan.png" height="20px"> 
                             <img src="assets/woman.png" height="30px">
                             <img src="assets/philippines.png" height="20px">
                             <h4 class="my-4">Identity</h4>
-                            <p class="grey-text">-??</p>
+                            <p class="grey-text"></p>
                         </div>
                         <!--Grid column-->
                         <!--Grid column-->
-                        <div id="activity" [style.opacity]="nycShow? 1:0" (click)="onClick('nyc')" style="cursor: pointer;" class="col-md-6 mb-5">
+                        <div id="activity" class="col-md-6 mb-5" onClick="showSection('activity')">
+                            <a href=""></a>
                             <img src="assets/train.png" height="30px"/>
     
                             <h4 class="my-4">Activities</h4>
-                            <p class="grey-text"> ?? </p>
+                            <p class="grey-text">   </p>
                         </div>
                         <!--Grid column-->
     
@@ -141,19 +173,18 @@
             
             <div class="canvas">
                 <canvas class="myCanvas">
-                    <p>Add suitable fallback here.</p>
+                    <p></p>
                   </canvas>
               
                   <script src="canvas.js"></script>
             </div>
     
         <!--Main layout-->
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-<footer>
-    <div class="footer" >
-        <hr class="my-5">
+        
+<footer>         
+    <hr class="my-5">
+
+    <div class="footer">
         <div class="content">
             <p><i class="icon-star-empty fa"></i>&nbsp; m i a &nbsp; m a n a b a t &nbsp;<i class="icon-star-empty fa"></i></p>
             <p><a href="mailto:miamanabat@gmail.com"><i class="icon-envelope-alt fa"></i></a>&nbsp;
@@ -165,4 +196,9 @@
         </div>
     </div>
 </footer>
+</div>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
 </html>

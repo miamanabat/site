@@ -1,7 +1,8 @@
 .footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
-    float: none;
+    left: 45%;
+    float: left;
 }
 .content {
     text-align: center;
@@ -99,29 +100,11 @@ a:link {
   top: 0;
 }
 
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
 
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
 }
 
 .active,
@@ -138,3 +121,31 @@ a:link {
     margin-right: auto;
     width: 50%;
   }
+
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f300;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+  .change {
+    background-color: rgba(207, 238, 255, 0.212);
+      width: 200%;
+      height: 100%;
+      padding: 100px;
+      border-radius: 50px;
+      transition: all 1.5s;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+
+    }
