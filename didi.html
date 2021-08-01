@@ -12,26 +12,61 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">  
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-  <ul class="nav navbar-nav " *ngIf="!collapsed">
-    <li><a href="/" class="nav-link"><i class="fa fa-home"></i>&nbsp;Home
-    </a></li>                
-    <li><a href="/about" class="nav-link">About Me</a></li>
-    <li><a href="/" class="nav-link">Activities</a></li>
+<script>
+  var myVar;
+  
+  function myFunction() {
+      myVar = setTimeout(showPage, 1500);
+  }
+  
+  function showPage() {
+      document.getElementById("loader-wrapper").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+  }
+  
+</script>
+<body onload="myFunction()" style="margin:0;">
+<div id="loader-wrapper">
+  <div>
+      <p style="text-align:center; margin:100px;">loading...</p>
+  </div>
+  <div id="loader">
+      <img src="assets/favicon.ico" height="100%">
+  </div>
+</div>
 
-</ul>
-    <span class="navbar-brand ml-auto"><img src="assets/favicon.ico" height="30px"> :)</span>
-    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">    <span class="navbar-brand ml-auto"><img src="assets/favicon.ico" height="30px"> :)</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home"></i>&nbsp;Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Activities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resume.html">Resume</a>
+        </li>
+      </ul>
+<!--         <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
 
-  
-
-
-    
-</div>
-<body>
   <div class="text-center mb-5">
     <h3>didier manabat <3</h3>
 <p>dang what a cutie</p>
